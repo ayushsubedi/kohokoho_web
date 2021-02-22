@@ -33,4 +33,4 @@ Mac/Linux
 
 `docker build -t kohokoho_web .`
 
-`docker run -p 8501:8501 -ti kohokoho_web /bin/bash -c "cd /src && source activate ml && streamlit run app.py"
+`docker run -p 8501:8501 -ti kohokoho_web /bin/bash -c "cd /src && source activate ml && streamlit run app.py"`
