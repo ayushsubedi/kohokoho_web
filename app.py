@@ -18,12 +18,10 @@ def main():
     with st.spinner(f"Loading {selection} ..."):
         page.write()
 
-    st.sidebar.title("Objectives")
+    st.sidebar.title("About")
     st.sidebar.info(
         """
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et posuere nisi, 
-        vitae condimentum odio. Donec a feugiat nisi. Phasellus imperdiet libero mi, 
-        eu vulputate lacus lacinia a. Orci varius natoque penatibus et magnis dis 
+        Kohokoho is a python package that anonymizes a dataset. Currently, it is still in infancy, and only support a select few data types. This is a UI wrapper for the package. 
         """
     )
 
