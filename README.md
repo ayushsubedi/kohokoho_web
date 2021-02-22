@@ -28,3 +28,9 @@ Mac/Linux
 ### Run streamlit app
 
 `streamlit run app.py`
+
+## OR, build using docker
+
+`docker build -t kohokoho_web .`
+
+`docker run -p 8501:8501 -ti kohokoho_web /bin/bash -c "cd /src && source activate ml && streamlit run app.py"
