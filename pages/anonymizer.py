@@ -1,19 +1,29 @@
 import streamlit as st
 import pandas as pd
+import base64
 from kohokoho import anon
 
 def upload():
     raw_csv = st.file_uploader("Upload Dataset", type=['csv'])
     return raw_csv
 
+def get_table_download_link(df):
+    """Generates a link allowing the data in a given panda dataframe to be downloaded
+    in:  dataframe
+    out: href string
+    """
+    csv = df.to_csv(index=False)
+    b64 = base64.b64encode(csv.encode()).decode()
+    href = f'<a href="data:file/csv;base64,{b64}" download="anonymized.csv">Download anonymized file</a>'
+    return href
 
 def write():
     st.title('Upload dataset')
     df = upload()
     if df is not None:
         df = pd.read_csv(df)
-        st.subheader('First five rows')
-        st.dataframe(df.head())
+        st.subheader('Original dataset')
+        st.dataframe(df)
         st.subheader('Data types of columns')
         st.write(df.dtypes.to_dict())
         koho_df = anon(df)
@@ -103,4 +113,7 @@ def write():
                 col2.write('Anonymized data')
                 col2.dataframe(koho_df.anon_df()[email_cols])
 
-        
+
+        st.subheader('Anonymized dataset')
+        st.dataframe(koho_df.anon_df())
+        st.markdown(get_table_download_link(koho_df.anon_df()), unsafe_allow_html=True)
