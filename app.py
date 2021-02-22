@@ -1,10 +1,10 @@
 """Main module for the streamlit app"""
 import streamlit as st
-import pages.page1, pages.page2
+import pages.anonymizer, pages.page2
 from PIL import Image
 
 PAGES = {
-    "page1": pages.page1,
+    "Anonymizer": pages.anonymizer,
     "page2": pages.page2
 }
 
