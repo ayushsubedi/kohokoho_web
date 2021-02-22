@@ -1,4 +1,5 @@
 import streamlit as st
 
+
 def write():
-    st.title('Page2') 
+    st.title('Page2')

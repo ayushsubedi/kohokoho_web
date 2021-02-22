@@ -1,6 +1,7 @@
 """Main module for the streamlit app"""
 import streamlit as st
-import pages.anonymizer, pages.info
+import pages.anonymizer
+import pages.info
 from PIL import Image
 
 PAGES = {
@@ -21,7 +22,10 @@ def main():
     st.sidebar.title("About")
     st.sidebar.info(
         """
-        Kohokoho is a python package that anonymizes a dataset. Currently, it is still in infancy, and only support a select few data types. This is a UI wrapper for the package. 
+        Kohokoho is a python package that anonymizes a dataset.
+        Currently, it is still in infancy,
+        and only support a select few data types.
+        This is a UI wrapper for the package.
         """
     )
 
