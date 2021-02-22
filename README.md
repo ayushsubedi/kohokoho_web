@@ -1,5 +1,5 @@
 
-## Installation (for windows machine)
+## Installation
 
 #### Clone the repository
 
@@ -8,15 +8,23 @@
 
 #### CD into the cloned directory and create a virtualenv
 
+
 `python -m venv env`
 
 ### Enable virtualenv
 
+Windows
+
 `.\env\Scripts\activate`
+
+Mac/Linux
+
+`source env/bin/activate`
 
 ### Install dependency packages from requirements.txt
 
 `pip install -r requirements.txt`
 
 ### Run streamlit app
+
 `streamlit run app.py`
