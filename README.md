@@ -1,4 +1,4 @@
-## V0 Demo
+## Version-O Demo
 
 ![demo](https://github.com/ayushsubedi/kohokoho_web/blob/main/static/demo/demo.gif)
 
