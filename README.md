@@ -1,3 +1,7 @@
+## Test it here
+
+https://kohokoho.herokuapp.com/
+
 ## Version-O Demo
 
 ![demo](https://github.com/ayushsubedi/kohokoho_web/blob/main/static/demo/demo.gif)
