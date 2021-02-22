@@ -1,17 +1,17 @@
 """Main module for the streamlit app"""
 import streamlit as st
-import pages.anonymizer, pages.page2
+import pages.anonymizer, pages.info
 from PIL import Image
 
 PAGES = {
     "Anonymizer": pages.anonymizer,
-    "page2": pages.page2
+    "Info and Project Links": pages.info
 }
 
 
 def main():
     """Main function of the App"""
-    image = Image.open('static/img/logo.png')
+    image = Image.open('static/img/kohokohologo.png')
     st.sidebar.image(image, use_column_width=True)
     selection = st.sidebar.radio("Navigate to", list(PAGES.keys()))
     page = PAGES[selection]

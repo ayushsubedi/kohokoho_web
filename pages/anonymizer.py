@@ -5,7 +5,7 @@ from kohokoho import anon
 def upload():
     raw_csv = st.file_uploader("Upload Dataset", type=['csv'])
     return raw_csv
-    
+
 
 def write():
     st.title('Upload dataset')
@@ -21,50 +21,86 @@ def write():
 
         st.subheader('Select columns with Names')
         name_cols = st.multiselect('Ignore if no such column exist', list(df), key='name_cols')
-        if name_cols is not None:
+        if len(name_cols)>0:
             for col in name_cols:
                 koho_df.anon_name(col)
-            st.dataframe(koho_df.anon_df().head())
+            if st.checkbox('Show anonymization', key='checkbox_name_cols'):
+                col1, col2 = st.beta_columns(2)
+                col1.write('Original data')
+                col1.dataframe(koho_df._df()[name_cols])
+                col2.write('Anonymized data')
+                col2.dataframe(koho_df.anon_df()[name_cols])
 
         st.subheader('Select columns with unique Ids')
         id_cols = st.multiselect('Ignore if no such column exist', list(df), key ='id_cols')
-        if id_cols is not None:
+        if len(id_cols)>0:
             for col in id_cols:
                 koho_df.anon_id(col)
-            st.dataframe(koho_df.anon_df().head())
+            if st.checkbox('Show anonymization', key='checkbox_id_cols'):
+                col1, col2 = st.beta_columns(2)
+                col1.write('Original data')
+                col1.dataframe(koho_df._df()[id_cols])
+                col2.write('Anonymized data')
+                col2.dataframe(koho_df.anon_df()[id_cols])
 
         st.subheader('Select columns with continuous datatypes')
         continuous_cols = st.multiselect('Ignore if no such column exist', list(df), key ='continuous_cols')
-        if continuous_cols is not None:
+        if len(continuous_cols)>0:
             for col in continuous_cols:
                 koho_df.anon_continuous_num(col)
-            st.dataframe(koho_df.anon_df().head())
+            if st.checkbox('Show anonymization', key='checkbox_con_cols'):
+                col1, col2 = st.beta_columns(2)
+                col1.write('Original data')
+                col1.dataframe(koho_df._df()[continuous_cols])
+                col2.write('Anonymized data')
+                col2.dataframe(koho_df.anon_df()[continuous_cols])
         
         st.subheader('Select columns with discrete datatypes')
         discrete_cols = st.multiselect('Ignore if no such column exist', list(df), key ='discrete_cols')
-        if discrete_cols is not None:
+        if len(discrete_cols)>0:
             for col in discrete_cols:
                 koho_df.anon_discrete_num(col)
-            st.dataframe(koho_df.anon_df().head())
+            if st.checkbox('Show anonymization', key='checkbox_dis_cols'):
+                col1, col2 = st.beta_columns(2)
+                col1.write('Original data')
+                col1.dataframe(koho_df._df()[discrete_cols])
+                col2.write('Anonymized data')
+                col2.dataframe(koho_df.anon_df()[discrete_cols])
         
         st.subheader('Select columns with categorical datatypes')
         category_cols = st.multiselect('Ignore if no such column exist', list(df), key ='category_cols')
-        if category_cols is not None:
+        if len(category_cols)>0:
             for col in category_cols:
                 koho_df.anon_category(col)
-            st.dataframe(koho_df.anon_df().head())
+            if st.checkbox('Show anonymization', key='checkbox_cate_cols'):
+                col1, col2 = st.beta_columns(2)
+                col1.write('Original data')
+                col1.dataframe(koho_df._df()[category_cols])
+                col2.write('Anonymized data')
+                col2.dataframe(koho_df.anon_df()[category_cols])
         
         st.subheader('Select columns with date datatypes')
         date_cols = st.multiselect('Ignore if no such column exist', list(df), key ='date_cols')
-        if date_cols is not None:
+        if len(date_cols)>0:
             for col in date_cols:
                 koho_df.anon_date(col)
-            st.dataframe(koho_df.anon_df().head())
+            if st.checkbox('Show anonymization', key='checkbox_date_cols'):
+                col1, col2 = st.beta_columns(2)
+                col1.write('Original data')
+                col1.dataframe(koho_df._df()[date_cols])
+                col2.write('Anonymized data')
+                col2.dataframe(koho_df.anon_df()[date_cols])
 
         st.subheader('Select columns with email datatypes')
         email_cols = st.multiselect('Ignore if no such column exist', list(df), key ='email_cols')
-        if email_cols is not None:
+        if len(email_cols)>0:
             for col in email_cols:
                 koho_df.anon_email(col)
-            st.dataframe(koho_df.anon_df().head())
+            if st.checkbox('Show anonymization', key='checkbox_email_cols'):
+                col1, col2 = st.beta_columns(2)
+                col1.write('Original data')
+                col1.dataframe(koho_df._df()[email_cols])
+                col2.write('Anonymized data')
+                col2.dataframe(koho_df.anon_df()[email_cols])
+
         
