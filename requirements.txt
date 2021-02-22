@@ -17,6 +17,7 @@ decorator==4.4.2
 defusedxml==0.6.0
 entrypoints==0.3
 Faker==6.4.1
+flake8==3.8.4
 gitdb==4.0.5
 GitPython==3.1.13
 gunicorn==20.0.4
@@ -35,6 +36,7 @@ jupyterlab-pygments==0.1.2
 jupyterlab-widgets==1.0.0
 kohokoho==0.0.1
 MarkupSafe==1.1.1
+mccabe==0.6.1
 mistune==0.8.4
 nbclient==0.5.2
 nbconvert==6.0.7
@@ -54,8 +56,10 @@ prompt-toolkit==3.0.16
 protobuf==3.15.1
 ptyprocess==0.7.0
 pyarrow==3.0.0
+pycodestyle==2.6.0
 pycparser==2.20
 pydeck==0.6.1
+pyflakes==2.2.0
 Pygments==2.8.0
 pyparsing==2.4.7
 pyrsistent==0.17.3
