@@ -6,7 +6,7 @@ from PIL import Image
 
 PAGES = {
     "Anonymizer": pages.anonymizer,
-    "Info and Project Links": pages.info
+    "Why?": pages.info
 }
 
 
