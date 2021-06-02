@@ -147,9 +147,6 @@ token = ""
 # Default: "True"
 showfileUploaderEncoding = "True"
 
-# Set to false to disable the deprecation warning for the image format parameter.
-# Default: "True"
-showImageFormat = "True"
 
 # Set to false to disable the deprecation warning for using the global pyplot instance.
 # Default: "True"
@@ -189,3 +186,16 @@ keyPrefix = ""
 # Default: (unset)
 #profile =
 
+[theme]
+# Primary accent for interactive elements
+primaryColor = '#82f7ff'
+# Background color for the main content area
+backgroundColor = '#263238'
+# Background color for sidebar and most interactive widgets
+secondaryBackgroundColor = '#696969'
+# Color used for almost all text
+textColor = '#FFFFFF'
+# Font family for all text in the app, except code blocks
+# Accepted values (serif | sans serif | monospace) 
+# Default: "sans serif"
+font = "monospace"
