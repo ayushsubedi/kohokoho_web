@@ -12,7 +12,7 @@ PAGES = {
 
 def main():
     """Main function of the App"""
-    image = Image.open('static/img/kohokohologo.png')
+    image = Image.open('static/img/kohokoho.png')
     st.sidebar.image(image, use_column_width=True)
     selection = st.sidebar.radio("Navigate to", list(PAGES.keys()))
     page = PAGES[selection]

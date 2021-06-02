@@ -20,7 +20,7 @@ def get_table_download_link(df):
 
 
 def write():
-    st.title('Upload dataset')
+    st.title('Anonymize your data')
     df = upload()
     if df is not None:
         df = pd.read_csv(df)
