@@ -22,9 +22,11 @@ def get_table_download_link(df):
 
 def write():
     st.title("Anonymize your data")
-    df = upload()
-    if df is not None:
-        df = pd.read_csv(df)
+    data = upload()
+    if st.button('or, try with sample data'):
+        data = "static/test_dataset/test_dataset1.csv"
+    if data is not None:
+        df = pd.read_csv(data)
         st.subheader("Original dataset")
         st.dataframe(df)
         st.subheader("Data types of columns")

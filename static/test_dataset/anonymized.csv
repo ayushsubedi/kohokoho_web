@@ -1,0 +1,21 @@
+user_id,name,item_name,price,category_id,quantity,purchased_date,email
+ac82d55d-5422-4269-b5eb-e9ad04038100,Katherine Nichols,TV,40.0,187b9756-ddfc-408c-890e-e9276820f96b,1,2020-04-04,donna.martin@gmail.com
+ac82d55d-5422-4269-b5eb-e9ad04038100,Katherine Nichols,Vaccum,20.913,dce51fed-0380-476d-b413-990c89a5a526,2,2020-05-12,donna.martin@gmail.com
+6dac7a7a-8eb0-4168-a900-5b19fe6c99a0,Bradley Wong,Cup,5.917,7d031177-fb1b-4067-bc53-1cb681dfd144,1,2020-05-13,bobby.bradley@gmail.com
+bbd024c0-3591-46de-a283-b6faef3cf4d4,Robyn Johnson,Plate,4.604,240cb0a3-ba2f-4ca5-b710-6d01b78d908d,1,2020-05-14,austin.thomas@gmail.com
+618e9db9-b8b4-4961-a55a-08ae1af06950,Andrea Johnson,Lotion,4.402,72a8f547-47e8-4bc5-956e-042165fc106e,2,2020-05-15,jonathan.medina@gmail.com
+618e9db9-b8b4-4961-a55a-08ae1af06950,Andrea Johnson,Toothbrush,4.679,9ae6f7a4-c538-41a3-9183-77363c32bd14,1,2020-05-16,jonathan.medina@gmail.com
+528cb8ea-0703-47c3-adf2-c671bdf4a56a,Lawrence Dillon,Sanitizer,4.0,73ed9736-5dd2-4ac2-9314-892a6a80e129,3,2020-05-17,brandon.beasley@gmail.com
+bbd024c0-3591-46de-a283-b6faef3cf4d4,Robyn Johnson,Wine,6.447,adb88570-1d56-4ec5-9d76-7f4b3ce7e659,1,2020-04-04,austin.thomas@gmail.com
+96f3c548-e6bd-4048-968e-8e3ea38e9fbc,Bianca Roman,Yoga mat,11.884,beaf71c7-d752-429c-b892-f71d5b066ba6,2,2020-04-05,susan.morales@gmail.com
+f55f29df-e2a4-4bf1-969b-9fa1370d7d29,Kristina Holt,Beer,4.04,bc243d63-beb7-4771-aa6c-67894baf8462,4,2020-04-06,rachael.massey@gmail.com
+f0b8461e-9b3a-4b09-b8bb-ca1eb57cee5b,Nicole Delgado,Coffee,5.133,8825e2b3-6f36-42fe-adc9-4f10b5bd0658,5,2020-04-07,ross.strickland@gmail.com
+96f3c548-e6bd-4048-968e-8e3ea38e9fbc,Bianca Roman,Lotion,4.402,72a8f547-47e8-4bc5-956e-042165fc106e,3,2020-04-08,susan.morales@gmail.com
+f43defdb-0090-4cf0-81ee-fb8aa8e21bd9,Joseph Carroll,Coffee,5.133,8825e2b3-6f36-42fe-adc9-4f10b5bd0658,4,2020-04-09,jennifer.cox@gmail.com
+f55f29df-e2a4-4bf1-969b-9fa1370d7d29,Jennifer Perez,TV,40.0,187b9756-ddfc-408c-890e-e9276820f96b,2,2020-04-10,danny.lynn.dds@gmail.com
+528cb8ea-0703-47c3-adf2-c671bdf4a56a,Lawrence Dillon,Vaccum,20.913,dce51fed-0380-476d-b413-990c89a5a526,6,2020-05-06,brandon.beasley@gmail.com
+5be5668b-2eec-4005-a863-1b940763f54e,Nicole Hernandez,Sanitizer,4.0,73ed9736-5dd2-4ac2-9314-892a6a80e129,1,2020-05-07,ashley.nichols@gmail.com
+8e03f4f0-e79f-42e2-a241-f87d787a1672,Shaun Smith,Wine,6.447,adb88570-1d56-4ec5-9d76-7f4b3ce7e659,2,2020-05-08,angela.oneill@gmail.com
+3b6954ae-6fee-4d12-87da-9958eba235bc,Anna Brown,Plate,4.604,240cb0a3-ba2f-4ca5-b710-6d01b78d908d,4,2020-05-09,cody.moreno@gmail.com
+f0b8461e-9b3a-4b09-b8bb-ca1eb57cee5b,Wanda Flores,TV,40.0,187b9756-ddfc-408c-890e-e9276820f96b,1,2020-05-10,douglas.atkinson@gmail.com
+e8423f46-3bac-4655-b36b-270ae76ea25a,Tracy Jones,Vaccum,20.913,dce51fed-0380-476d-b413-990c89a5a526,1,2020-05-11,ellen.mccarthy@gmail.com
