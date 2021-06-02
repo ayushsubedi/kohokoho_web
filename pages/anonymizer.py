@@ -33,7 +33,7 @@ def write():
 
         st.subheader('Select columns with Names')
         name_cols = st.multiselect(
-            'Ignore if no such column exist',
+            'or, with anything that can be replicated for similar field. Ignore if no such column exist.',
             list(df),
             key='name_cols')
         if len(name_cols) > 0:
@@ -48,7 +48,7 @@ def write():
 
         st.subheader('Select columns with unique Ids')
         id_cols = st.multiselect(
-            'Ignore if no such column exist',
+            'UUID or numeric id or anything else that was meant to be an identifier. Ignore if no such column exist.',
             list(df),
             key='id_cols')
         if len(id_cols) > 0:
@@ -63,7 +63,7 @@ def write():
 
         st.subheader('Select columns with continuous datatypes')
         continuous_cols = st.multiselect(
-            'Ignore if no such column exist',
+            'mostly implies columns with double/float/decimals. Ignore if no such column exist.',
             (df.select_dtypes([np.number]).columns),
             key='continuous_cols')
         if len(continuous_cols) > 0:
@@ -76,7 +76,7 @@ def write():
                 col2.write('Anonymized data')
                 col2.dataframe(koho_df.anon_df()[continuous_cols])     
         st.subheader('Select columns with discrete datatypes')
-        discrete_cols = st.multiselect('Ignore if no such column exist', 
+        discrete_cols = st.multiselect('mostly implies columns with integers. Ignore if no such column exist.', 
                 (df.select_dtypes([np.number]).columns), 
                 key ='discrete_cols')
         if len(discrete_cols) > 0:
@@ -89,7 +89,7 @@ def write():
                 col2.write('Anonymized data')
                 col2.dataframe(koho_df.anon_df()[discrete_cols])
         st.subheader('Select columns with categorical datatypes')
-        category_cols = st.multiselect('Ignore if no such column exist', list(df), key ='category_cols')
+        category_cols = st.multiselect('variable that can take on one of a limited, and usually fixed, number of possible values. Ignore if no such column exist.', list(df), key ='category_cols')
         if len(category_cols) > 0:
             for col in category_cols:
                 koho_df.anon_category(col)
@@ -100,7 +100,7 @@ def write():
                 col2.write('Anonymized data')
                 col2.dataframe(koho_df.anon_df()[category_cols])
         st.subheader('Select columns with date datatypes')
-        date_cols = st.multiselect('Ignore if no such column exist', list(df), key ='date_cols')
+        date_cols = st.multiselect('for dates. Ignore if no such column exist., or if you want this to be real given everything else is anonymized.', list(df), key ='date_cols')
         if len(date_cols) > 0:
             for col in date_cols:
                 koho_df.anon_date(col)
@@ -112,7 +112,7 @@ def write():
                 col2.dataframe(koho_df.anon_df()[date_cols])
         st.subheader('Select columns with email datatypes')
         email_cols = st.multiselect(
-            'Ignore if no such column exist',
+            'you know emails. Ignore if no such column exist.',
             list(df),
             key='email_cols')
         if len(email_cols) > 0:
