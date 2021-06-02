@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import base64
 from kohokoho import anon
-
+import numpy as np
 
 def upload():
     raw_csv = st.file_uploader("Upload Dataset", type=['csv'])
@@ -64,7 +64,7 @@ def write():
         st.subheader('Select columns with continuous datatypes')
         continuous_cols = st.multiselect(
             'Ignore if no such column exist',
-            list(df),
+            (df.select_dtypes([np.number]).columns),
             key='continuous_cols')
         if len(continuous_cols) > 0:
             for col in continuous_cols:
@@ -76,7 +76,9 @@ def write():
                 col2.write('Anonymized data')
                 col2.dataframe(koho_df.anon_df()[continuous_cols])     
         st.subheader('Select columns with discrete datatypes')
-        discrete_cols = st.multiselect('Ignore if no such column exist', list(df), key ='discrete_cols')
+        discrete_cols = st.multiselect('Ignore if no such column exist', 
+                (df.select_dtypes([np.number]).columns), 
+                key ='discrete_cols')
         if len(discrete_cols) > 0:
             for col in discrete_cols:
                 koho_df.anon_discrete_num(col)
