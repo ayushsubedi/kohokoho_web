@@ -28,7 +28,7 @@ def main():
         This is a UI wrapper for the package.
         """
     )
-
+    st.sidebar.title("Important Links")
 
 if __name__ == "__main__":
     main()
