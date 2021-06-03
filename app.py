@@ -6,7 +6,7 @@ from PIL import Image
 
 PAGES = {
     "Anonymizer": pages.anonymizer,
-    "Why?": pages.info
+    "About": pages.info
 }
 
 
@@ -18,14 +18,10 @@ def main():
     page = PAGES[selection]
     with st.spinner(f"Loading {selection} ..."):
         page.write()
-
-    st.sidebar.title("About")
+    st.sidebar.title("Installation")
     st.sidebar.info(
         """
-        Kohokoho is a python package that anonymizes a dataset.
-        Currently, it is still in infancy,
-        and only support a select few data types.
-        This is a UI wrapper for the package.
+        pip install kohokoho
         """
     )
     st.sidebar.title("Project Links")
