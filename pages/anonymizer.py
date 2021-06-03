@@ -37,7 +37,7 @@ def write():
 
         st.subheader("Select columns with Names")
         name_cols = st.multiselect(
-            "or, with anything that can be replicated for similar field. Ignore if no such column exist.",
+            "Ignore if no such column exist.",
             list(df),
             key="name_cols",
         )
@@ -114,7 +114,7 @@ def write():
                 col2.dataframe(koho_df.anon_df()[category_cols])
         st.subheader("Select columns with date datatypes")
         date_cols = st.multiselect(
-            "for dates. Ignore if no such column exist., or if you want this to be real given everything else is anonymized.",
+            "for dates. Ignore if no such column exist., or if you want this to be real given everything else is anonymized (for trend analysis).",
             list(df),
             key="date_cols",
         )
