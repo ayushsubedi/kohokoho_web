@@ -77,5 +77,8 @@ def write():
         Contributions
         - [ ]  find contributors
         - [ ]  develop contribution guidelines
+
+        V1 goal
+        - [ ]  Build the platform such that it ticks all boxes with regards to GDRP compliance regarding data anonymization.  
         """
     )
