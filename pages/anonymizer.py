@@ -10,12 +10,12 @@ def upload():
     return raw_csv
 
 
-def get_table_download_link(df):
+def get_table_download_link(df, text, filename):
     csv = df.to_csv(index=False)
     b64 = base64.b64encode(csv.encode()).decode()
     href = f"""
-    <a href="data:file/csv;base64,{b64}" download="anonymized.csv">
-    Download anonymized file</a>
+    <a href="data:file/csv;base64,{b64}" download={filename}>
+    {text}</a>
     """
     return href
 
@@ -23,8 +23,9 @@ def get_table_download_link(df):
 def write():
     st.title("Anonymize your data")
     data = upload()
-    if st.button('or, try with sample data'):
-        data = "static/test_dataset/test_dataset1.csv"
+    df_ = pd.read_csv('static/test_dataset/test_dataset1.csv')
+    st.markdown(get_table_download_link(df_, "don't have a csv? download a sample", "sample.csv"), unsafe_allow_html=True)
+
     if data is not None:
         df = pd.read_csv(data)
         st.subheader("Original dataset")
@@ -143,4 +144,4 @@ def write():
                 col2.dataframe(koho_df.anon_df()[email_cols])
         st.subheader("Anonymized dataset")
         st.dataframe(koho_df.anon_df())
-        st.markdown(get_table_download_link(koho_df.anon_df()), unsafe_allow_html=True)
+        st.markdown(get_table_download_link(koho_df.anon_df(), "Download anonymized file", "anonymized.csv"), unsafe_allow_html=True)
