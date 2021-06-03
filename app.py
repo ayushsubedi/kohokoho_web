@@ -19,15 +19,6 @@ def main():
     with st.spinner(f"Loading {selection} ..."):
         page.write()
 
-    st.sidebar.title("About")
-    st.sidebar.info(
-        """
-        Kohokoho is a python package that anonymizes a dataset.
-        Currently, it is still in infancy,
-        and only support a select few data types.
-        This is a UI wrapper for the package.
-        """
-    )
     st.sidebar.title("Project Links")
     st.sidebar.markdown('[GitHub for this project](https://github.com/ayushsubedi/kohokoho_web)', unsafe_allow_html=True)
     st.sidebar.markdown('[GitHub for the package](https://github.com/ayushsubedi/kohokoho)', unsafe_allow_html=True)  
