@@ -6,7 +6,7 @@ from PIL import Image
 
 PAGES = {
     "Anonymizer": pages.anonymizer,
-    "Why?": pages.info
+    "About": pages.info
 }
 
 
@@ -18,7 +18,12 @@ def main():
     page = PAGES[selection]
     with st.spinner(f"Loading {selection} ..."):
         page.write()
-
+    st.sidebar.title("Installation")
+    st.sidebar.info(
+        """
+        pip install kohokoho
+        """
+    )
     st.sidebar.title("Project Links")
     st.sidebar.markdown('[GitHub for this project](https://github.com/ayushsubedi/kohokoho_web)', unsafe_allow_html=True)
     st.sidebar.markdown('[GitHub for the package](https://github.com/ayushsubedi/kohokoho)', unsafe_allow_html=True)  
