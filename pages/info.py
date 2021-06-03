@@ -9,7 +9,7 @@ def write():
         """
         Kohokoho (को हो को हो) is a python package that anonymizes a dataset.
         Currently, it is still in its infancy,
-        and only support a select few data types:
+        and only supports a select few data types:
 
         - Names
         - IDs (UUID, Numeric IDs etc.)
@@ -28,7 +28,7 @@ def write():
         """
         It is a process of hiding sensitive data. Although there are different variations, 
         Kohokoho was developed to make sure the gist of the data remains the same. That is, 
-        anonymize the sensite data but allow insights to be drawn from it to match the trends 
+        anonymize the sensitive data but allow insights to be drawn from it to match the trends 
         from the original data. 
 
         The technique used are Data Masking and Pseudonymization.
