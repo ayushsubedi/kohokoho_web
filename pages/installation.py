@@ -19,7 +19,7 @@ def write():
 
         Windows
 
-        `.\env\Scripts\activate`
+        `.\env\Scripts\\activate"`
 
         Mac/Linux
 
@@ -70,7 +70,7 @@ def write():
 
         Windows
 
-        `.\env\Scripts\activate`
+        `.\env\Scripts\\activate`
 
         Mac/Linux
 
