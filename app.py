@@ -2,11 +2,13 @@
 import streamlit as st
 import pages.anonymizer
 import pages.info
+import pages.installation
 from PIL import Image
 
 PAGES = {
     "Anonymizer": pages.anonymizer,
-    "About": pages.info
+    "About": pages.info,
+    "Installation": pages.installation
 }
 
 
