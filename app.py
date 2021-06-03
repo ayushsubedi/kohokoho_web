@@ -36,5 +36,7 @@ def main():
         Feel free to create issues, or submit a pull request.
         """
     )
+    image_ = Image.open("static/img/license.png")
+    st.sidebar.image(image_, use_column_width=True)
 if __name__ == "__main__":
     main()
